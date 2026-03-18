@@ -128,6 +128,14 @@ h2 {
     color: var(--grey-950);
 }
 
+.circle-rate-box:focus {
+    outline: none;
+}
+
+.circle-rate-box:focus + span {
+    outline: 0.2rem solid var(--orange-500);
+}
+
 .submit-button {
     background-color: var(--orange-500);
     padding: 0.72rem;
@@ -153,6 +161,10 @@ h2 {
     color: var(--grey-950);
     background-color: var(--white);
     cursor:pointer;
+}
+
+.submit-button:focus{
+    outline: 0.2rem solid gray;
 }
 
 @media screen and (min-width: 375px) {
