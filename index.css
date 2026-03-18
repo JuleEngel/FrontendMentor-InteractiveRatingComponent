@@ -1,0 +1,219 @@
+:root {
+    --white: hsl(0, 100%, 100%);
+    --grey-500: hsl(217, 12%, 63%);
+    --grey-900: hsl(213, 19%, 18%);
+    --grey-950: hsl(216, 12%, 8%);
+    --orange-500: hsl(25, 97%, 53%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--grey-950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Overpass", sans-serif;
+    color: hsl(0, 100%, 100%);
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#rating-box,#thank-you-box {
+    background: var(--grey-900);
+    background: linear-gradient(180deg, #27313B 0%, #252D37 14%, #181D24 78%);
+    width: 20rem;
+    display: grid;
+    border-radius: 1.125rem;
+    padding: 1.4rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.circle-img-box, .rate-label span{
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(213, 12%,20%);
+    font-size: 0.7813rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.rate-label span {
+    transition: 0.3s ease;
+}
+
+.text-box, .grade-section {
+    color: var(--grey-500);
+}
+
+#rating-text, .text-box {
+    font-size: 0.8rem;
+}
+
+#rating-text {
+    color: hsl(24, 73%, 64%);
+    background-color: var(--grey-900);
+    padding: 0.6rem 0.8rem 0.5rem 0.8rem;
+    justify-self: center;
+    border-radius: 1.5rem;
+    margin: 1rem 0;
+    width: fit-content;
+    line-height: 1;
+    letter-spacing: 0.03rem;
+}
+
+.thank-you-text {
+    text-align: center;
+}
+
+#rating-form {
+    display: grid;
+    place-items: center;
+}
+
+.grade-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.3125rem;
+}
+
+.rate-label {
+    display: flex;
+}
+
+#rating-star-img {
+    max-width: 30%;
+    height: auto;
+}
+
+#thank-you-img {
+    justify-self: center;
+    margin: 0.5rem 0;
+    width: 52%;
+    height: auto;
+}
+
+.circle-rate-box {
+    appearance: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+.circle-rate-box:checked + span{
+    background-color: var(--white);
+    color: var(--grey-950);
+}
+
+.submit-button {
+    background-color: var(--orange-500);
+    padding: 0.72rem;
+    color: black;
+    font-size: 0.7895rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    border:none;
+    border-radius: 1.5rem;
+    margin: 0.5rem 0.4rem;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.rate-label:hover span{
+    color: var(--grey-950);
+    background-color: var(--orange-500);
+    cursor:pointer;
+}
+
+.submit-button:hover {
+    color: var(--grey-950);
+    background-color: var(--white);
+    cursor:pointer;
+}
+
+@media screen and (min-width: 375px) {
+    .header_rate_section {
+        margin-top: 2.2rem;
+    }
+
+    .header_thank_you_section, .header_rate_section {
+        font-size: 1.7rem;
+    }
+
+    #rating-box, #thank-you-box {
+        background: linear-gradient(180deg, #252D37 18%, #181D24 66%);
+        width: 26rem;
+        border-radius: 1.8rem;
+        padding: 2.2rem;
+    }
+
+    #rating-star-img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    #thank-you-img {
+        width: 50%;
+    }
+
+    .circle-img-box {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .rate-label span{
+        font-size: 1rem;
+        width: 3.1rem;
+        height: 3.1rem;
+    }
+
+    #rating-text, .text-box {
+        font-size: 0.9rem;
+        word-spacing: 0.08rem;
+        line-height: 1.4rem;
+    }
+
+    #rating-text {
+        margin: 1.2rem;
+        padding: 0.4rem 1rem 0.3rem 1rem;
+    }
+
+    .thank-you-text {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
+    .submit-button {
+        padding: 1rem 0.72rem;
+    }
+
+    .grade-section {
+        gap: 1.3rem;
+        margin-bottom: 1.6rem;
+        margin-top: 0.5rem;
+    }
+}
