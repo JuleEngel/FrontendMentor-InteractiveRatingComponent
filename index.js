@@ -9,5 +9,6 @@ document.getElementById("rating-form").addEventListener("submit", function(event
         document.getElementById("rating-note").textContent = checked.value;
         document.getElementById("rating-box").style.display = 'none';
         document.getElementById("thank-you-box").classList.remove('hidden');
+        document.getElementById("thank-you-box").querySelector("h2").focus();
     }
 });
