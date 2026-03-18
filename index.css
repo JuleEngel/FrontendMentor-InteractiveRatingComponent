@@ -132,7 +132,7 @@ h2 {
     outline: none;
 }
 
-.circle-rate-box:focus + span {
+.circle-rate-box:focus-visible + span {
     outline: 0.2rem solid var(--orange-500);
 }
 
